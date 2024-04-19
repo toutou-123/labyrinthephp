@@ -102,27 +102,26 @@
                     # code...
                     break;
             }
-            for ($i = 0; $i < count($maze); $i++) {
-                for ($j = 0; $j < count($maze[$i]); $j++) {
-                    if ($maze[$i][$j] == 2 && !($i == $_SESSION['pos'][0] && $j == $_SESSION['pos'][1] - 1) && !($i == $_SESSION['pos'][0] && $j == $_SESSION['pos'][1] + 1) && !($i == $_SESSION['pos'][0] - 1 && $j == $_SESSION['pos'][1]) && !($i == $_SESSION['pos'][0] + 1 && $j == $_SESSION['pos'][1])) {
-                        $maze[$i][$j] = 4;
-                    }
-                    if ($maze[$i][$j] == 0 && !($i == $_SESSION['pos'][0] && $j == $_SESSION['pos'][1] - 1) && !($i == $_SESSION['pos'][0] && $j == $_SESSION['pos'][1] + 1) && !($i == $_SESSION['pos'][0] - 1 && $j == $_SESSION['pos'][1]) && !($i == $_SESSION['pos'][0] + 1 && $j == $_SESSION['pos'][1])) {
-                        $maze[$i][$j] = 4;
-                    }
-                    if ($maze[$i][$j] == 3 && !($i == $_SESSION['pos'][0] && $j == $_SESSION['pos'][1] - 1) && !($i == $_SESSION['pos'][0] && $j == $_SESSION['pos'][1] + 1) && !($i == $_SESSION['pos'][0] - 1 && $j == $_SESSION['pos'][1]) && !($i == $_SESSION['pos'][0] + 1 && $j == $_SESSION['pos'][1])) {
-                        $maze[$i][$j] = 4;
-                    }
-                }
+        }
+    }
+    for ($i = 0; $i < count($maze); $i++) {
+        for ($j = 0; $j < count($maze[$i]); $j++) {
+            if ($maze[$i][$j] == 2 && !($i == $_SESSION['pos'][0] && $j == $_SESSION['pos'][1] - 1) && !($i == $_SESSION['pos'][0] && $j == $_SESSION['pos'][1] + 1) && !($i == $_SESSION['pos'][0] - 1 && $j == $_SESSION['pos'][1]) && !($i == $_SESSION['pos'][0] + 1 && $j == $_SESSION['pos'][1])) {
+                $maze[$i][$j] = 4;
+            }
+            if ($maze[$i][$j] == 0 && !($i == $_SESSION['pos'][0] && $j == $_SESSION['pos'][1] - 1) && !($i == $_SESSION['pos'][0] && $j == $_SESSION['pos'][1] + 1) && !($i == $_SESSION['pos'][0] - 1 && $j == $_SESSION['pos'][1]) && !($i == $_SESSION['pos'][0] + 1 && $j == $_SESSION['pos'][1])) {
+                $maze[$i][$j] = 4;
+            }
+            if ($maze[$i][$j] == 3 && !($i == $_SESSION['pos'][0] && $j == $_SESSION['pos'][1] - 1) && !($i == $_SESSION['pos'][0] && $j == $_SESSION['pos'][1] + 1) && !($i == $_SESSION['pos'][0] - 1 && $j == $_SESSION['pos'][1]) && !($i == $_SESSION['pos'][0] + 1 && $j == $_SESSION['pos'][1])) {
+                $maze[$i][$j] = 4;
             }
         }
     }
-
     ?>
     <form method="post" action="">
-        <input type="submit" name="move" value="up">
-        <input type="submit" name="move" value="down">
         <input type="submit" name="move" value="left">
+        <input type="submit" name="move" value="down">
+        <input type="submit" name="move" value="up">
         <input type="submit" name="move" value="right">
         <input type="submit" name="reset" value="reset">
 
@@ -143,7 +142,7 @@
                 } elseif ($value == 3) {
                     echo ('<td><img src="./images/MickeyMouse.jpg" alt="End"></td>');
                 } elseif ($value == 4) {
-                    echo ('<td><img src="./images/smoke.png" alt="End"></td>');
+                    echo ('<td><img src="./images/smoke-removebg-preview.png" alt="End"></td>');
                 }
             }
             echo ('<tr>');

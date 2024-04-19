@@ -1,10 +1,13 @@
 body {
+    background-image: url("../images/free-nature-images.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
     margin: 0;
     padding: 0;
 }
-header{
+
+header {
     background-color: #333;
 }
 
@@ -21,14 +24,14 @@ table {
     margin: 0 auto;
 }
 
-p{
+p {
     text-align: center;
     font-size: x-large;
 }
 
 td {
-    width: 50px;
-    height: 50px;
+    width: 90px;
+    height: 80px;
     background-size: cover;
     background-position: center;
 }
@@ -41,6 +44,7 @@ img {
 form {
     text-align: center;
     margin-top: 30px;
+    margin-bottom: 20px;
 }
 
 input[type="submit"] {
